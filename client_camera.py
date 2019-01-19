@@ -3,7 +3,7 @@ import numpy as np
 import socket
 import sys
 import pickle
-import struct 
+import struct
 import time
 
 cap=cv2.VideoCapture(0)

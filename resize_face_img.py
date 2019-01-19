@@ -67,15 +67,14 @@ for (dirpath , dirnames, filenames) in os.walk(top_path):
 for i ,k in enumerate(all_images_paths):
     img = Image.open(k)
     gray = ImageOps.grayscale(img)
-    #cv2.imshow("gray",np.array(gray))
+
     cv2.waitKey(1)
-    
+
     if not os.path.exists(os.path.join(args['output'],*k.split("\\")[1:-1])):
         folder = os.path.join(args['output'],*k.split("\\")[1:-1])
         print("creating folder {}".format(folder))
         path = os.path.join(args['output'],*k.split("\\")[1:])
         os.makedirs(folder)
-        # print("writing :{}".format(path))
         if args['thread']:
             pool.apply_async(write_img,(gray,path,i))
         else:

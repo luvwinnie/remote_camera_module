@@ -48,6 +48,3 @@ while True:
     except socket.error:
         time.wait(1)
         cv2.destroyAllWindows()
-
-    
-    
