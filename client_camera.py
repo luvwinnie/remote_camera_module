@@ -9,7 +9,7 @@ import time
 cap=cv2.VideoCapture(0)
 clientsocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 clientsocket.settimeout(10)
-clientsocket.connect(('192.168.1.88',8089))
+clientsocket.connect(('192.168.1.70',8089))
 
 while True:
     try:

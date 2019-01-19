@@ -6,7 +6,7 @@ import numpy as np
 import struct ## new
 import base64
 
-HOST='192.168.1.80'
+HOST='192.168.1.70'
 PORT=8089
 
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
